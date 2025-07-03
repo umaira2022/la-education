@@ -1,0 +1,14 @@
+---
+title: "Los Angeles Education"
+author: "Umaira"
+execute: 
+  echo: false
+---
+
+```{r}
+#| message: false
+
+library(tidycensus)
+library(tidyverse)
+
+```
