@@ -3,12 +3,29 @@ title: "Los Angeles Education"
 author: "Umaira"
 execute: 
   echo: false
+  message: false
+  warning: false
+format: html
 ---
 
 ```{r}
-#| message: false
-
 library(tidycensus)
 library(tidyverse)
+library(leaflet)
+library(scales)  # for percent formatting
+library(RColorBrewer)
+library(htmltools)
 
 ```
+
+```{r}
+get_acs(
+  geography = "tract",
+  variables = "B15003_022",
+  county = "Los Angeles",
+  state = "CA",
+  year = 2022,
+  geometry = FALSE
+)
+```
+
